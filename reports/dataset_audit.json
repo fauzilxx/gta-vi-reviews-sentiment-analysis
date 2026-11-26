@@ -1,0 +1,198 @@
+{
+  "provenance": {
+    "url": "https://www.kaggle.com/datasets/ektarr/gta-vi-user-reviews/data",
+    "provided_by": "user",
+    "version": null,
+    "license": null,
+    "verification": "URL supplied by user; Kaggle page had no readable documentation in browsing tool.",
+    "review_id_semantics": "unverified; repeated IDs occur across platforms"
+  },
+  "raw": {
+    "rows": 51385,
+    "columns": [
+      "platform",
+      "review_id",
+      "published_date",
+      "score",
+      "review_text"
+    ],
+    "dtypes": {
+      "platform": "str",
+      "review_id": "str",
+      "published_date": "str",
+      "score": "int64",
+      "review_text": "str"
+    },
+    "missing": {
+      "platform": 0,
+      "review_id": 0,
+      "published_date": 0,
+      "score": 0,
+      "review_text": 0
+    },
+    "duplicate_rows": 0,
+    "date_range": [
+      "2026-11-19",
+      "2026-11-24"
+    ],
+    "score_counts": {
+      "10": 18097,
+      "0": 14956,
+      "1": 4167,
+      "2": 2594,
+      "4": 2234,
+      "3": 2186,
+      "9": 2109,
+      "5": 1657,
+      "8": 1198,
+      "7": 1107,
+      "6": 1080
+    },
+    "platform_counts": {
+      "playstation-5": 46317,
+      "xbox-series-x": 5068
+    },
+    "review_id_duplicate_excess": 1156,
+    "review_text_duplicate_excess": 651
+  },
+  "processed": {
+    "rows": 49981,
+    "columns": [
+      "platform",
+      "review_id",
+      "published_date",
+      "score",
+      "review_text",
+      "clean_text",
+      "sentiment"
+    ],
+    "dtypes": {
+      "platform": "str",
+      "review_id": "str",
+      "published_date": "str",
+      "score": "int64",
+      "review_text": "str",
+      "clean_text": "str",
+      "sentiment": "str"
+    },
+    "missing": {
+      "platform": 0,
+      "review_id": 0,
+      "published_date": 0,
+      "score": 0,
+      "review_text": 0,
+      "clean_text": 0,
+      "sentiment": 0
+    },
+    "duplicate_rows": 0,
+    "date_range": [
+      "2026-11-19",
+      "2026-11-24"
+    ],
+    "score_counts": {
+      "10": 17669,
+      "0": 14386,
+      "1": 4045,
+      "2": 2533,
+      "4": 2188,
+      "3": 2150,
+      "9": 2083,
+      "5": 1624,
+      "8": 1173,
+      "7": 1079,
+      "6": 1051
+    },
+    "platform_counts": {
+      "playstation-5": 45580,
+      "xbox-series-x": 4401
+    },
+    "sentiment_counts": {
+      "Negative": 25302,
+      "Positive": 20925,
+      "Neutral": 3754
+    },
+    "review_id_duplicate_excess": 0,
+    "review_text_duplicate_excess": 0,
+    "clean_text_duplicate_excess": 34
+  },
+  "source_column_difference_counts": {
+    "platform": 0,
+    "review_id": 0,
+    "published_date": 0,
+    "score": 0,
+    "review_text": 1
+  },
+  "duplicate_id_groups": {
+    "total": 1156,
+    "different_texts": 613,
+    "different_scores": 160
+  },
+  "normalized_label_conflict_groups": 1,
+  "rating_label_mismatches": 0,
+  "baseline_artifacts_unchanged": true,
+  "baseline": {
+    "train": {
+      "shape": [
+        39984,
+        20000
+      ],
+      "zero_vectors": 114,
+      "class_counts": {
+        "Negative": 20241,
+        "Positive": 16740,
+        "Neutral": 3003
+      }
+    },
+    "test": {
+      "shape": [
+        9997,
+        20000
+      ],
+      "zero_vectors": 30,
+      "class_counts": {
+        "Negative": 5061,
+        "Positive": 4185,
+        "Neutral": 751
+      }
+    },
+    "overlap_clean_text": 12,
+    "test_rows_with_train_text": 12
+  },
+  "grouped_v1": {
+    "train": {
+      "shape": [
+        39985,
+        20000
+      ],
+      "zero_vectors": 117,
+      "class_counts": {
+        "Negative": 20242,
+        "Positive": 16740,
+        "Neutral": 3003
+      }
+    },
+    "test": {
+      "shape": [
+        9996,
+        20000
+      ],
+      "zero_vectors": 26,
+      "class_counts": {
+        "Negative": 5060,
+        "Positive": 4185,
+        "Neutral": 751
+      }
+    },
+    "overlap_clean_text": 0
+  },
+  "environment": {
+    "python": "3.13.0",
+    "packages": {
+      "numpy": "2.5.5",
+      "pandas": "3.1.1",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.1",
+      "joblib": "1.6.0"
+    }
+  }
+}

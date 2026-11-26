@@ -1,0 +1,141 @@
+{
+  "verified_utc": "2026-11-25T17:13:05.380394+00:00",
+  "phase6": "Saved vectorizer and all 3 models loaded; checksums, parameters, class/feature dimensions, cleaning source and runtime versions verified.",
+  "phase7": "Five Streamlit pages implemented and exercised in running server and AppTest.",
+  "phase8": "Functional tests passed; browser visual verification limited by environment.",
+  "unit_and_ui_tests": {
+    "passed": 15,
+    "failed": 0,
+    "dashboard_and_inference_tests": 9,
+    "log": "reports/dashboard_test_log.txt"
+  },
+  "running_server_checks": [
+    {
+      "page": "overview",
+      "status": "ready"
+    },
+    {
+      "page": "eda",
+      "status": "ready"
+    },
+    {
+      "interaction": "30 frequent words",
+      "status": "passed"
+    },
+    {
+      "page": "comparison",
+      "status": "ready"
+    },
+    {
+      "page": "evaluation",
+      "status": "ready"
+    },
+    {
+      "interaction": "all evaluation models and normalized matrix",
+      "status": "passed"
+    },
+    {
+      "page": "prediction",
+      "status": "ready"
+    },
+    {
+      "interaction": "prediction",
+      "model": "naive_bayes",
+      "expected": "Negative",
+      "status": "passed"
+    },
+    {
+      "interaction": "prediction",
+      "model": "logistic_regression",
+      "expected": "Negative",
+      "status": "passed"
+    },
+    {
+      "interaction": "prediction",
+      "model": "linear_svm",
+      "expected": "Negative",
+      "status": "passed"
+    },
+    {
+      "interaction": "invalid input rejected",
+      "input": "",
+      "status": "passed"
+    },
+    {
+      "interaction": "invalid input rejected",
+      "input": "12345 !!!",
+      "status": "passed"
+    },
+    {
+      "interaction": "invalid input rejected",
+      "input": "qzxvnonexistenttokenxx qzxvnonexistenttokenyy",
+      "status": "passed"
+    }
+  ],
+  "dashboard_metrics_match_experiment": true,
+  "evaluation_verification": {
+    "test_rows": 9996,
+    "models": {
+      "naive_bayes": {
+        "reload_test_predictions_identical": true,
+        "metrics_recomputed_match": true,
+        "confusion_matrix_covers_all_test_rows": true,
+        "classification_reports_match": true,
+        "error_summaries_match": true,
+        "subgroup_metrics_match": true
+      },
+      "logistic_regression": {
+        "reload_test_predictions_identical": true,
+        "metrics_recomputed_match": true,
+        "confusion_matrix_covers_all_test_rows": true,
+        "classification_reports_match": true,
+        "error_summaries_match": true,
+        "subgroup_metrics_match": true
+      },
+      "linear_svm": {
+        "reload_test_predictions_identical": true,
+        "metrics_recomputed_match": true,
+        "confusion_matrix_covers_all_test_rows": true,
+        "classification_reports_match": true,
+        "error_summaries_match": true,
+        "subgroup_metrics_match": true
+      }
+    },
+    "misclassifications_match": true,
+    "majority_baseline_matches": true,
+    "feature_manifest_unchanged": true,
+    "predictions_sha256": "a6574a0fc81465eff9ecad03d4ac1201c6a55d9dc729b62ac122aac33449435d"
+  },
+  "baseline_and_experiment_artifacts_unchanged": true,
+  "project_models_retrained": false,
+  "project_split_regenerated": false,
+  "project_tfidf_refitted": false,
+  "runtime": {
+    "streamlit": "1.67.0",
+    "altair": "6.3.0",
+    "url": "http://localhost:8765",
+    "health": "ok",
+    "agent_api": "disabled",
+    "normal_app_running": true
+  },
+  "source_hashes": {
+    "dashboard/app.py": "6596c739863b8514d389ef357822ca7d1a37e09215d5fe0f88ab29d4f90194fb",
+    "dashboard/components.py": "8afa05710f77f1245b60bc5801b85ce65889324a1a14d83b38370f82bcd6c8e5",
+    "dashboard/data.py": "b0e17777c3e4bb27d03d4a63fd3155756ed6ddd4079b16f978ff828621bd0407",
+    "dashboard/app_pages/comparison.py": "fdfa1f915cc4ad7dd5490eb52c1ff493862b6792e4fedc069acd2f73df0ae4ab",
+    "dashboard/app_pages/eda.py": "f1e92f849aa4b1493c50c114ef47d822905335c58752aaba3379ecadd82ac273",
+    "dashboard/app_pages/evaluation.py": "60727102f4f4e2bf25c2edb043c49ddc2c8d3171c88d1918e543eb7712e33607",
+    "dashboard/app_pages/overview.py": "d78b60cd041b45ffc20f73efd276c1a5183b46a4e3143f976da7904a459deef0",
+    "dashboard/app_pages/prediction.py": "5572fcfe86d75216ed0e8a50d811c061a6d00c761ba1358a74b94f3338825927",
+    "src/predict.py": "e4ebb413d4d8bd07ceb6711f8b2395d85c6e7e9bead3062a15d08ebddbdefb5d",
+    "scripts/check_dashboard_live.py": "8fcfee0035118642e8986a406ae9c81e3c1c50b45460c25ca4f319785900a938",
+    "tests/test_dashboard.py": "6fe37f6b9a45edbac04258f5a7bc64e45f5cc4fcbf9d6250520318a1676ad8a4"
+  },
+  "limitations": [
+    "Browser visual verification attempted with headless Edge but failed because the GPU process was unavailable in the restricted environment; no successful screenshots.",
+    "ty/mypy are not installed; static type checking was not performed. Syntax compilation, AppTest, and real-server runtime checks passed.",
+    "Fresh installation on another machine was not tested; persisted model environment is pinned.",
+    "AppTest emitted the documented missing ScriptRunContext warning in bare test mode; no warnings or tracebacks were observed in the real Streamlit server console.",
+    "Rating-proxy labels, weak Neutral performance, multilingual cleaning limitations and unresolved dataset provenance/ID semantics remain as documented."
+  ]
+}

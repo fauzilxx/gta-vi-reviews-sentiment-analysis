@@ -1,0 +1,83 @@
+=================================================================
+PHASE 3 � FEATURE EXTRACTION & DATASET SPLITTING PIPELINE
+=================================================================
+
+[1] Membaca processed dataset dari: C:\Users\LENOVO\AppData\Local\Temp\tmp6obd1wxo\data.csv
+    Total data: 46 baris
+    Kolom tersedia: ['review_id', 'clean_text', 'sentiment']
+    Null pada clean_text : 0
+    Null pada sentiment  : 0
+    Kelas target terdeteksi: {'Neutral', 'Negative', 'Positive'}
+    Fitur input teks : 'clean_text'
+    Target label     : 'sentiment'
+    Fitur hanya teks; identitas kelompok dipakai untuk mencegah duplikasi lintas split
+
+[2] Grouped stratified split (target test=20.0%, random_state=42)...
+    Jumlah data Training :     37 (80.4%)
+    Jumlah data Testing  :      9 (19.6%)
+
+    Distribusi Sentimen pada Training Set:
+      - Negative:     12 (32.43%)
+      - Neutral :     13 (35.14%)
+      - Positive:     12 (32.43%)
+
+    Distribusi Sentimen pada Testing Set:
+      - Negative:      3 (33.33%)
+      - Neutral :      3 (33.33%)
+      - Positive:      3 (33.33%)
+
+[3] Konfigurasi TfidfVectorizer:
+    - max_features : 100
+    - ngram_range  : (1, 2)
+    - min_df       : 1
+    - max_df       : 1.0
+    - sublinear_tf : True
+    - stop_words   : None (Multilingual Dataset - Preserved)
+
+    Fitting TF-IDF Vectorizer HANYA pada X_train (mencegah data leakage)...
+    Dimensi X_train_tfidf: (37, 43)
+    Jumlah kosakata (vocabulary) terbentuk: 43
+
+    Transformasi X_test menggunakan vectorizer yang telah di-fit...
+    Dimensi X_test_tfidf : (9, 43)
+
+[4] Menyimpan Artefak:
+    [+] Saved: C:\Users\LENOVO\AppData\Local\Temp\tmp6obd1wxo\models\tfidf_vectorizer.pkl (0.00 MB)
+    [+] Saved: C:\Users\LENOVO\AppData\Local\Temp\tmp6obd1wxo\features\X_train_tfidf.npz (0.00 MB)
+    [+] Saved: C:\Users\LENOVO\AppData\Local\Temp\tmp6obd1wxo\features\X_test_tfidf.npz (0.00 MB)
+    [+] Saved: C:\Users\LENOVO\AppData\Local\Temp\tmp6obd1wxo\features\y_train.csv (37 baris)
+    [+] Saved: C:\Users\LENOVO\AppData\Local\Temp\tmp6obd1wxo\features\y_test.csv (9 baris)
+
+[5] Contoh fitur unigram dan bigram teratas dalam vocabulary:
+    Contoh n-gram: ['average', 'average ordinary', 'bad', 'bad boring', 'boring', 'boring shared', 'fun', 'fun shared', 'great', 'great fun', 'ordinary', 'ordinary shared', 'shared', 'shared term0', 'shared term1']
+
+=================================================================
+PHASE 3 SELESAI DENGAN SUKSES!
+=================================================================
+
+test_comparison_table_matches_saved_metrics (test_dashboard.DashboardTests.test_comparison_table_matches_saved_metrics) ... 2026-11-26 00:11:44.956 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_eda_word_count_control (test_dashboard.DashboardTests.test_eda_word_count_control) ... 2026-11-26 00:11:45.786 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_evaluation_switches_models_and_normalization (test_dashboard.DashboardTests.test_evaluation_switches_models_and_normalization) ... 2026-11-26 00:11:52.417 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_every_page_runs_without_any_fit (test_dashboard.DashboardTests.test_every_page_runs_without_any_fit) ... 2026-11-26 00:11:54.375 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_missing_artifact_shows_friendly_error (test_dashboard.DashboardTests.test_missing_artifact_shows_friendly_error) ... 2026-11-26 00:11:56.049 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_prediction_form_success_empty_and_unknown_words (test_dashboard.DashboardTests.test_prediction_form_success_empty_and_unknown_words) ... 2026-11-26 00:11:56.865 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_invalid_and_unknown_vocabulary_input (test_dashboard.InferenceTests.test_invalid_and_unknown_vocabulary_input) ... ok
+test_missing_artifact_and_corrupted_checksum_fail (test_dashboard.InferenceTests.test_missing_artifact_and_corrupted_checksum_fail) ... ok
+test_prediction_matches_saved_test_row_for_every_model (test_dashboard.InferenceTests.test_prediction_matches_saved_test_row_for_every_model) ... ok
+test_macro_and_weighted_metrics_with_unpredicted_minority (test_models.ModelTests.test_macro_and_weighted_metrics_with_unpredicted_minority) ... ok
+test_training_isolation_reload_evaluation_and_tamper_detection (test_models.ModelTests.test_training_isolation_reload_evaluation_and_tamper_detection) ... ok
+test_grouped_artifacts_and_corruption_detection (test_pipeline.PipelineTests.test_grouped_artifacts_and_corruption_detection) ... ok
+test_preprocessing_refuses_existing_artifact (test_pipeline.PipelineTests.test_preprocessing_refuses_existing_artifact) ... ok
+test_rating_boundaries_and_invalid_inputs (test_pipeline.PipelineTests.test_rating_boundaries_and_invalid_inputs) ... ok
+test_unicode_cleaning_is_versioned (test_pipeline.PipelineTests.test_unicode_cleaning_is_versioned) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 25.283s
+
+OK

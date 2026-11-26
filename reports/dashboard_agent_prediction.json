@@ -1,0 +1,202 @@
+{
+  "schema_version": 1,
+  "session_id": "s_9842b8d713a60610be975c0d38003582",
+  "status": "ready",
+  "observed_at": "2026-11-25T17:08:18Z",
+  "page": {
+    "url_path": "prediction",
+    "title": "Sentiment prediction",
+    "icon": ":material/chat:"
+  },
+  "pages": [
+    {
+      "url_path": "",
+      "title": "Overview",
+      "icon": ":material/dashboard:"
+    },
+    {
+      "url_path": "eda",
+      "title": "Exploratory data analysis",
+      "icon": ":material/query_stats:"
+    },
+    {
+      "url_path": "comparison",
+      "title": "Model comparison",
+      "icon": ":material/leaderboard:"
+    },
+    {
+      "url_path": "evaluation",
+      "title": "Model evaluation",
+      "icon": ":material/fact_check:"
+    },
+    {
+      "url_path": "prediction",
+      "title": "Sentiment prediction",
+      "icon": ":material/chat:"
+    }
+  ],
+  "query_params": {},
+  "tree": {
+    "type": "root",
+    "children": [
+      {
+        "type": "main",
+        "children": [
+          {
+            "type": "caption",
+            "props": {
+              "body": "GTA VI SENTIMENT LAB  /  SENTIMENT PREDICTION"
+            }
+          },
+          {
+            "type": "title",
+            "props": {
+              "body": "Coba satu ulasan baru"
+            }
+          },
+          {
+            "type": "markdown",
+            "props": {
+              "body": "Masukkan ulasan dan pilih algoritma. Model akan memprediksi kategori **Negative**, **Neutral**, atau **Positive** dari teks."
+            }
+          },
+          {
+            "type": "form",
+            "key": "prediction_form",
+            "props": {
+              "clear_on_submit": false,
+              "enter_to_submit": true
+            },
+            "children": [
+              {
+                "type": "segmented_control",
+                "key": "prediction_model",
+                "props": {
+                  "label": "Algoritma prediksi",
+                  "options": [
+                    "Multinomial Naive Bayes",
+                    "Logistic Regression",
+                    "LinearSVC"
+                  ],
+                  "selection_mode": "single",
+                  "required": true,
+                  "disabled": false,
+                  "label_visibility": "visible",
+                  "on_change": "rerun"
+                },
+                "value_schema": {
+                  "type": "string"
+                },
+                "value": "Logistic Regression",
+                "form_id": "prediction_form"
+              },
+              {
+                "type": "text_area",
+                "key": "review_text",
+                "props": {
+                  "label": "Teks ulasan",
+                  "placeholder": "Contoh: The story is engaging, but the performance needs improvement.",
+                  "disabled": false,
+                  "required": false,
+                  "label_visibility": "visible",
+                  "on_change": "rerun"
+                },
+                "value_schema": {
+                  "type": "string"
+                },
+                "value": "",
+                "form_id": "prediction_form"
+              },
+              {
+                "type": "form_submit_button",
+                "key": "predict_submit",
+                "props": {
+                  "label": "Prediksi sentimen",
+                  "icon": ":material/analytics:",
+                  "type": "primary",
+                  "disabled": false
+                },
+                "form_id": "prediction_form"
+              }
+            ]
+          },
+          {
+            "type": "caption",
+            "props": {
+              "body": "Label training dibentuk dari rating: Negative 0\u20134, Neutral 5\u20137, Positive 8\u201310. Hasil merupakan prediksi kategori rating dari teks, bukan penilaian manusia atau kepastian sentimen."
+            }
+          },
+          {
+            "type": "markdown",
+            "props": {
+              "body": "Bahasa dan pola kata di luar vocabulary training dapat tidak dikenali. Tidak ada confidence atau probabilitas yang ditampilkan karena keluaran ketiga model tidak setara."
+            }
+          }
+        ]
+      },
+      {
+        "type": "sidebar",
+        "children": [
+          {
+            "type": "title",
+            "props": {
+              "body": "GTA VI"
+            }
+          },
+          {
+            "type": "caption",
+            "props": {
+              "body": "SENTIMENT LAB"
+            }
+          },
+          {
+            "type": "markdown",
+            "props": {
+              "body": "Dari ulasan pengguna ke evaluasi tiga model klasifikasi."
+            }
+          },
+          {
+            "type": "caption",
+            "props": {
+              "body": "Label berasal dari rating 0\u201310, bukan anotasi sentimen manusia."
+            }
+          },
+          {
+            "type": "caption",
+            "props": {
+              "body": "Eksperimen grouped_v1 \u00b7 TF-IDF \u00b7 3 kelas"
+            }
+          }
+        ]
+      },
+      {
+        "type": "event",
+        "children": []
+      },
+      {
+        "type": "bottom",
+        "children": []
+      }
+    ]
+  },
+  "actions": [
+    {
+      "key": "prediction_model",
+      "kind": "value",
+      "type": "segmented_control",
+      "label": "Algoritma prediksi"
+    },
+    {
+      "key": "review_text",
+      "kind": "value",
+      "type": "text_area",
+      "label": "Teks ulasan"
+    },
+    {
+      "key": "predict_submit",
+      "kind": "trigger",
+      "type": "form_submit_button",
+      "label": "Prediksi sentimen"
+    }
+  ]
+}

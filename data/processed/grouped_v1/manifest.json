@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "experiment": "grouped_v1",
+  "created_utc": "2026-11-25T15:50:42.166491+00:00",
+  "dataset_path": "data/processed/processed_reviews.csv",
+  "dataset_sha256": "1ade51d4122526283a555a110becbc2895694464cbfcb64a64b7ddd6e04c434b",
+  "cleaning_version": "legacy-v1",
+  "split": {
+    "method": "StratifiedGroupKFold",
+    "group": "clean_text",
+    "n_splits": 5,
+    "selected_fold": 0,
+    "shuffle": true,
+    "random_state": 42,
+    "requested_test_size": 0.2,
+    "actual_test_size": 0.19999599847942218
+  },
+  "tfidf": {
+    "max_features": 20000,
+    "ngram_range": [
+      1,
+      2
+    ],
+    "min_df": 2,
+    "max_df": 0.95,
+    "sublinear_tf": true,
+    "stop_words": null
+  },
+  "environment": {
+    "python": "3.13.0",
+    "packages": {
+      "numpy": "2.5.5",
+      "pandas": "3.1.1",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.1",
+      "joblib": "1.6.0"
+    }
+  },
+  "limitations": [
+    "Provenance dan arti review_id belum terverifikasi independen.",
+    "Dataset processed legacy dipertahankan; cleaning multilingual memiliki keterbatasan.",
+    "Label adalah proksi rating; konflik label dipertahankan dalam satu kelompok.",
+    "Vektor kosong dipertahankan agar evaluasi mencakup seluruh split."
+  ],
+  "files": {
+    "models/grouped_v1/tfidf_vectorizer.pkl": "9184826bcdaab80d07119bd1c11b872fdf58dcb85a3a7623583564c5ab18f250",
+    "data/processed/grouped_v1/X_train_tfidf.npz": "40a453085d0af4cb7a75d55f1e6d58fd13e31f48dd953959fa7e876021d8dbb7",
+    "data/processed/grouped_v1/X_test_tfidf.npz": "6ba254992c1f0d72182e34a5b8b48181b6eac7cee0470343c94892c3242f1c41",
+    "data/processed/grouped_v1/y_train.csv": "f11c7f55d3352e6fd807b08f7de6cfb4a631362e41c349e1fe7ec0cefcded9b0",
+    "data/processed/grouped_v1/y_test.csv": "396e3d674224f7a703298ad7e585d800cf2596bacf76000036997903f0016a89",
+    "data/processed/grouped_v1/split_membership.csv": "36c1b82104fc6b1e87bd4c972007cf759db6b93e6e2f0b1eba74d130d54c51d4"
+  },
+  "source_files": {
+    "src/feature_extraction.py": "c6b2cef48e3bec650c5a7f3b22a814d19541ace286d93fded522c4aa7c66c138",
+    "src/preprocessing.py": "e0c574e31696a65778c87ead3a9979290e33fe746c05fa8faa3f2159927bde76",
+    "src/artifacts.py": "8163696842ca77e836bc2366fa3afd579d8b108a219abb61a9216a49385338fd"
+  },
+  "source_files_at_build": {
+    "src/feature_extraction.py": "081ddd0871b79cd71978947ee31f5eb6520dccb5669ec853a75c7f0621a1c3fd",
+    "src/preprocessing.py": "e0c574e31696a65778c87ead3a9979290e33fe746c05fa8faa3f2159927bde76",
+    "src/artifacts.py": "8163696842ca77e836bc2366fa3afd579d8b108a219abb61a9216a49385338fd"
+  },
+  "source_metadata_note": "After build, feature_extraction.py docstring and split log wording were corrected; numerical implementation unchanged. Build-time hashes retained separately."
+}

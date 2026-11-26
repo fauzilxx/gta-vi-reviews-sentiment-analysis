@@ -1,0 +1,41 @@
+{
+  "test_rows": 9996,
+  "models": {
+    "naive_bayes": {
+      "reload_test_predictions_identical": true,
+      "metrics_recomputed_match": true,
+      "confusion_matrix_covers_all_test_rows": true
+    },
+    "logistic_regression": {
+      "reload_test_predictions_identical": true,
+      "metrics_recomputed_match": true,
+      "confusion_matrix_covers_all_test_rows": true
+    },
+    "linear_svm": {
+      "reload_test_predictions_identical": true,
+      "metrics_recomputed_match": true,
+      "confusion_matrix_covers_all_test_rows": true
+    }
+  },
+  "feature_manifest_unchanged": true,
+  "predictions_sha256": "a6574a0fc81465eff9ecad03d4ac1201c6a55d9dc729b62ac122aac33449435d",
+  "files": {
+    "reports/grouped_v1/evaluation.json": "4bc2df41ed099af724a30ff7e3b6b9ee576d26f5dba86e0d043e7261ba751f3b",
+    "reports/grouped_v1/evaluation_report.md": "1cbc33164a30562a1e60ff6c68f09b87199a17a1bd033998e46c62468fbfbac9",
+    "reports/grouped_v1/linear_svm_classification_report.json": "0aa993cb1302e095bb5a870472e5d2d123277d52a2d287a0f8882cf20e1ac7ab",
+    "reports/grouped_v1/linear_svm_confusion_matrix.csv": "b4a2780082d9eedd3ab2eefdca64a82c42199cc929f6410f2382934e0a60fa7b",
+    "reports/grouped_v1/logistic_regression_classification_report.json": "251db1888b712188cca4d1647855ba38e6fb0e604c5f409e398f710798a2e9cb",
+    "reports/grouped_v1/logistic_regression_confusion_matrix.csv": "63fe609533bdcde8219d5eb74316767802ade3c75264e134dbd0e4427045ad27",
+    "reports/grouped_v1/metrics.csv": "988a15b176bca51c5ad691d869e38633ab4d411eb47181d86caec6dcf5179367",
+    "reports/grouped_v1/misclassifications.csv": "ec69cac4196abfa2bbc7c12c2c7b4a13affab75e077ceaf2ed4bc48c11926d5f",
+    "reports/grouped_v1/model_plan.json": "662a3f6d7411ab65c17f596cdc67ccc766955758da9f33c9fd51c60e3289d26c",
+    "reports/grouped_v1/naive_bayes_classification_report.json": "367203fa39307d0531a37b167977daf9daa83f7ac9b9f43f5a14ce5685991732",
+    "reports/grouped_v1/naive_bayes_confusion_matrix.csv": "124d9dd5da5033b6626e7cb18238e53782ca6ed29d80f0719a802824c0fe4a21",
+    "reports/grouped_v1/per_class_metrics.csv": "76f50098a60ada9eb9f9efa679d67ccd8f872580b7a281eebfa4d5b016780192",
+    "reports/grouped_v1/predictions.csv": "a6574a0fc81465eff9ecad03d4ac1201c6a55d9dc729b62ac122aac33449435d",
+    "reports/grouped_v1/figures/confusion_matrices.png": "6443dc141faf42dc9ed0e5d6ce1fb12ce7bd26dd5b044dd91715128314cab54f",
+    "reports/grouped_v1/figures/confusion_matrices_normalized.png": "29d0a4d04151b38d819000b837aa6a9dbf7878443f640b2fcb946e5b002dc701",
+    "reports/grouped_v1/figures/model_comparison.png": "e98eaab2882c433866d031f25d234f6b0f0a927b8996a84964d34116aab972c5",
+    "reports/grouped_v1/figures/per_class_f1.png": "a3e1ba9cf18aa8c95d4c2c6188f3896c337739bf54eb190c507c102315953f99"
+  }
+}

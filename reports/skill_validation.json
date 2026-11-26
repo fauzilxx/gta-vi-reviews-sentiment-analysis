@@ -1,0 +1,10 @@
+﻿{
+    "requested_path":  ".agents/skills/gta-vi-sentiment-analysis/SKILL.md",
+    "draft_path":  "skill-drafts/gta-vi-sentiment-analysis/SKILL.md",
+    "sha256":  "5f780ea87a1c2331cf10838e28d0b1803b4f448f23021c2e367d98a9e6df9374",
+    "installed_at_requested_path":  true,
+    "basic_structure_checks_passed":  true,
+    "bundled_validator":  "Not run successfully: PyYAML unavailable in project .venv.",
+    "placement_blocker":  null,
+    "installed_utc":  "2026-11-25T16:33:05.5176332Z"
+}

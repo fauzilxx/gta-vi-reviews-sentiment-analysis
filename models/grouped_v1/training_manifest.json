@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-11-25T16:16:29.584328+00:00",
+  "features_dir": "data/processed/grouped_v1",
+  "classes": [
+    "Negative",
+    "Neutral",
+    "Positive"
+  ],
+  "feature_manifest_sha256": "691e564b52a9d2efda7ea13bba50edb7965b3fc3a5044da8b07333bb38e028cb",
+  "plan_path": "reports/grouped_v1/model_plan.json",
+  "plan_sha256": "662a3f6d7411ab65c17f596cdc67ccc766955758da9f33c9fd51c60e3289d26c",
+  "training_class_counts": {
+    "Negative": 20242,
+    "Positive": 16740,
+    "Neutral": 3003
+  },
+  "environment": {
+    "python": "3.13.0",
+    "packages": {
+      "numpy": "2.5.5",
+      "pandas": "3.1.1",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.1",
+      "joblib": "1.6.0"
+    }
+  },
+  "models": {
+    "naive_bayes": {
+      "path": "models/grouped_v1/naive_bayes.pkl",
+      "sha256": "57b15b44caa7ae4409bd033f68266e953ef6b5b6b1000306d149027c9c0e398c",
+      "estimator": "MultinomialNB",
+      "parameters": {
+        "alpha": 1.0,
+        "class_prior": null,
+        "fit_prior": true,
+        "force_alpha": true
+      },
+      "training_seconds": 0.08525330014526844,
+      "n_iter": null,
+      "warnings": [],
+      "reload_training_predictions_identical": true
+    },
+    "logistic_regression": {
+      "path": "models/grouped_v1/logistic_regression.pkl",
+      "sha256": "36e101439b1eea9c42dfaca0a164aa166c3a68e7a6d751231194e4bf069b8755",
+      "estimator": "LogisticRegression",
+      "parameters": {
+        "C": 1.0,
+        "class_weight": "balanced",
+        "dual": false,
+        "fit_intercept": true,
+        "intercept_scaling": 1,
+        "l1_ratio": 0.0,
+        "max_iter": 2000,
+        "n_jobs": null,
+        "penalty": "deprecated",
+        "random_state": 42,
+        "solver": "lbfgs",
+        "tol": 0.0001,
+        "verbose": 0,
+        "warm_start": false
+      },
+      "training_seconds": 5.084404200082645,
+      "n_iter": [
+        82
+      ],
+      "warnings": [],
+      "reload_training_predictions_identical": true
+    },
+    "linear_svm": {
+      "path": "models/grouped_v1/linear_svm.pkl",
+      "sha256": "60cff8f8e25d2983a5d956f7b8ea07f500e9a30f384ef264ce42e447bfdd26b3",
+      "estimator": "LinearSVC",
+      "parameters": {
+        "C": 1.0,
+        "class_weight": "balanced",
+        "dual": "auto",
+        "fit_intercept": true,
+        "intercept_scaling": 1,
+        "loss": "squared_hinge",
+        "max_iter": 10000,
+        "multi_class": "ovr",
+        "penalty": "l2",
+        "random_state": 42,
+        "tol": 0.0001,
+        "verbose": 0
+      },
+      "training_seconds": 9.262279900023714,
+      "n_iter": 17,
+      "warnings": [],
+      "reload_training_predictions_identical": true
+    }
+  },
+  "source_hashes": {
+    "src/train.py": "5a7949dfe8351a7df59faed1ef8b242491270d9d8b86bd78130372510152c748",
+    "src/modeling.py": "0bfc90d7fd61e91407cbdb1428763c779549788dea9857f617ef3ada9011b4ef"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "checked_utc": "2026-11-25T17:09:51.613597+00:00",
+  "base_url": "http://127.0.0.1:8765",
+  "checks": [
+    {
+      "page": "overview",
+      "status": "ready"
+    },
+    {
+      "page": "eda",
+      "status": "ready"
+    },
+    {
+      "interaction": "30 frequent words",
+      "status": "passed"
+    },
+    {
+      "page": "comparison",
+      "status": "ready"
+    },
+    {
+      "page": "evaluation",
+      "status": "ready"
+    },
+    {
+      "interaction": "all evaluation models and normalized matrix",
+      "status": "passed"
+    },
+    {
+      "page": "prediction",
+      "status": "ready"
+    },
+    {
+      "interaction": "prediction",
+      "model": "naive_bayes",
+      "expected": "Negative",
+      "status": "passed"
+    },
+    {
+      "interaction": "prediction",
+      "model": "logistic_regression",
+      "expected": "Negative",
+      "status": "passed"
+    },
+    {
+      "interaction": "prediction",
+      "model": "linear_svm",
+      "expected": "Negative",
+      "status": "passed"
+    },
+    {
+      "interaction": "invalid input rejected",
+      "input": "",
+      "status": "passed"
+    },
+    {
+      "interaction": "invalid input rejected",
+      "input": "12345 !!!",
+      "status": "passed"
+    },
+    {
+      "interaction": "invalid input rejected",
+      "input": "qzxvnonexistenttokenxx qzxvnonexistenttokenyy",
+      "status": "passed"
+    }
+  ],
+  "dashboard_metrics_match_experiment": true,
+  "observed_comparison_table": {
+    "logistic_regression": {
+      "Model": "Logistic Regression",
+      "Accuracy": 81.53261304521808,
+      "Precision macro": 69.09298169941516,
+      "Recall macro": 72.67899309175426,
+      "Macro F1": 69.8482996542566,
+      "Weighted F1": 82.94131475270797,
+      "Pilihan Macro F1": true
+    },
+    "linear_svm": {
+      "Model": "LinearSVC",
+      "Accuracy": 83.81352541016408,
+      "Precision macro": 68.50481876586309,
+      "Recall macro": 67.82148134687588,
+      "Macro F1": 68.11678111704272,
+      "Weighted F1": 83.52246232872879,
+      "Pilihan Macro F1": false
+    },
+    "naive_bayes": {
+      "Model": "Multinomial Naive Bayes",
+      "Accuracy": 82.11284513805522,
+      "Precision macro": 65.07645515026167,
+      "Recall macro": 59.34466027725195,
+      "Macro F1": 57.25939421115035,
+      "Weighted F1": 79.00217322236576,
+      "Pilihan Macro F1": false
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "verified_utc": "2026-11-25T16:23:40.752023+00:00",
+  "baseline_8_files_unchanged": true,
+  "phase3_inputs_unchanged": true,
+  "trained_models": [
+    "naive_bayes",
+    "logistic_regression",
+    "linear_svm"
+  ],
+  "all_models_converged_without_warnings": true,
+  "reload_and_metric_verification": {
+    "naive_bayes": {
+      "reload_test_predictions_identical": true,
+      "metrics_recomputed_match": true,
+      "confusion_matrix_covers_all_test_rows": true
+    },
+    "logistic_regression": {
+      "reload_test_predictions_identical": true,
+      "metrics_recomputed_match": true,
+      "confusion_matrix_covers_all_test_rows": true
+    },
+    "linear_svm": {
+      "reload_test_predictions_identical": true,
+      "metrics_recomputed_match": true,
+      "confusion_matrix_covers_all_test_rows": true
+    }
+  },
+  "unit_tests": {
+    "passed": 6,
+    "failed": 0,
+    "command": "python -B -m unittest discover -s tests -v",
+    "evidence": "Successful execution observed before full training; later evaluation change only added metric-definition metadata and report wording."
+  },
+  "new_notebooks": {
+    "notebooks/04_model_training.ipynb": "43ab30de41e69890942645eade631972470ecca15fc6d00a80b0d4cd25243321",
+    "notebooks/05_model_evaluation.ipynb": "fa6afa7d65e96537c287e84bff601417c0cddd71685c152258b0f783bdc76a18"
+  },
+  "skill_status": {
+    "requested_path": ".agents/skills/gta-vi-sentiment-analysis/SKILL.md",
+    "draft_path": "skill-drafts/gta-vi-sentiment-analysis/SKILL.md",
+    "sha256": "5f780ea87a1c2331cf10838e28d0b1803b4f448f23021c2e367d98a9e6df9374",
+    "installed_at_requested_path": false,
+    "basic_structure_checks_passed": true,
+    "bundled_validator": "Not run successfully: PyYAML unavailable in project .venv.",
+    "placement_blocker": "Automatic write approval rejected; .agents is read-only in session filesystem permissions."
+  },
+  "dashboard_created": false,
+  "best_model_by_macro_f1": "logistic_regression"
+}

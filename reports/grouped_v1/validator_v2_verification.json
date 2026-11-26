@@ -1,0 +1,56 @@
+{
+  "verified_utc": "2026-11-25T16:42:10.518499+00:00",
+  "command": "python -B -m src.evaluate --verify-only",
+  "validation": {
+    "test_rows": 9996,
+    "models": {
+      "naive_bayes": {
+        "reload_test_predictions_identical": true,
+        "metrics_recomputed_match": true,
+        "confusion_matrix_covers_all_test_rows": true,
+        "classification_reports_match": true,
+        "error_summaries_match": true,
+        "subgroup_metrics_match": true
+      },
+      "logistic_regression": {
+        "reload_test_predictions_identical": true,
+        "metrics_recomputed_match": true,
+        "confusion_matrix_covers_all_test_rows": true,
+        "classification_reports_match": true,
+        "error_summaries_match": true,
+        "subgroup_metrics_match": true
+      },
+      "linear_svm": {
+        "reload_test_predictions_identical": true,
+        "metrics_recomputed_match": true,
+        "confusion_matrix_covers_all_test_rows": true,
+        "classification_reports_match": true,
+        "error_summaries_match": true,
+        "subgroup_metrics_match": true
+      }
+    },
+    "misclassifications_match": true,
+    "majority_baseline_matches": true,
+    "feature_manifest_unchanged": true,
+    "predictions_sha256": "a6574a0fc81465eff9ecad03d4ac1201c6a55d9dc729b62ac122aac33449435d"
+  },
+  "baseline_artifacts_unchanged": true,
+  "original_evaluation_files_unchanged": true,
+  "models_unchanged": true,
+  "project_models_retrained": false,
+  "project_tfidf_refitted": false,
+  "tests": {
+    "passed": 6,
+    "failed": 0,
+    "additional_report_corruption_scenarios": 10,
+    "command": "python -B -m unittest discover -s tests -v",
+    "note": "Regression fixtures use synthetic data in temporary directories; project artifacts are not regenerated."
+  },
+  "validator_source_sha256": "e427a1866e930d313660e8ccad97efadfab1196872a043ba651465aedf1614a6",
+  "test_source_sha256": "c1adb0b4b0bcc396d7ea2d49b444df54bdc6eec66d1365fe414b2cdb54fcac92",
+  "original_evaluation_sha256": "4bc2df41ed099af724a30ff7e3b6b9ee576d26f5dba86e0d043e7261ba751f3b",
+  "historical_evaluation_source_hashes": {
+    "src/evaluate.py": "65b791ee19ecb9863e4541e284f90934d102a4087e7af852ce8e120f209bbff7",
+    "src/modeling.py": "0bfc90d7fd61e91407cbdb1428763c779549788dea9857f617ef3ada9011b4ef"
+  }
+}

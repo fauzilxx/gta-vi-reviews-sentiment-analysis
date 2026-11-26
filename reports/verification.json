@@ -1,0 +1,70 @@
+{
+  "verified_utc": "2026-11-25T15:54:18.608680+00:00",
+  "baseline_checksums_unchanged": {
+    "reviews.csv": true,
+    "data/processed/processed_reviews.csv": true,
+    "data/processed/X_test_tfidf.npz": true,
+    "data/processed/X_train_tfidf.npz": true,
+    "data/processed/y_test.csv": true,
+    "data/processed/y_train.csv": true,
+    "data/raw/gta_vi_reviews.csv": true,
+    "models/tfidf_vectorizer.pkl": true
+  },
+  "new_artifact_checksums_match_manifest": true,
+  "source_checksums_match_final_metadata": true,
+  "grouped_validation": {
+    "train": {
+      "shape": [
+        39985,
+        20000
+      ],
+      "zero_vectors": 117,
+      "class_counts": {
+        "Negative": 20242,
+        "Positive": 16740,
+        "Neutral": 3003
+      }
+    },
+    "test": {
+      "shape": [
+        9996,
+        20000
+      ],
+      "zero_vectors": 26,
+      "class_counts": {
+        "Negative": 5060,
+        "Positive": 4185,
+        "Neutral": 751
+      }
+    },
+    "overlap_clean_text": 0
+  },
+  "notebooks": {
+    "notebooks/01_eda.ipynb": {
+      "code_cells": 3,
+      "executed": true,
+      "sha256": "10158c3fbfa585edb1e481d3dd8de0e5974775e1d026ef9f294110f03c2cb7fd"
+    },
+    "notebooks/02_preprocessing.ipynb": {
+      "code_cells": 3,
+      "executed": true,
+      "sha256": "9f976f3520eaa8299e152c691f8573fd7216cec0d3667615b31d51bfa5f190f7"
+    },
+    "notebooks/03_feature_extraction.ipynb": {
+      "code_cells": 3,
+      "executed": true,
+      "sha256": "9206e2dab20524a9d31a3f6290c576392fca52714a1554d04a63fbbc85b4fae6"
+    }
+  },
+  "regression_tests": {
+    "command": "python -B -m unittest discover -s tests -v",
+    "passed": 4,
+    "failed": 0,
+    "evidence": "Successful test execution observed during this change; subsequent feature module changes were documentation and log wording only."
+  },
+  "limits": [
+    "Kaggle URL supplied by user; dataset version, license, and review_id semantics unverified.",
+    "Legacy processed subset and cleaning retained; no human labels fabricated.",
+    "No classifier training or dashboard development performed."
+  ]
+}

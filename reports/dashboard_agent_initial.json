@@ -1,0 +1,352 @@
+{
+  "schema_version": 1,
+  "session_id": "s_9842b8d713a60610be975c0d38003582",
+  "status": "ready",
+  "observed_at": "2026-11-25T17:06:03Z",
+  "page": {
+    "url_path": "",
+    "title": "Overview",
+    "icon": ":material/dashboard:"
+  },
+  "pages": [
+    {
+      "url_path": "",
+      "title": "Overview",
+      "icon": ":material/dashboard:"
+    },
+    {
+      "url_path": "eda",
+      "title": "Exploratory data analysis",
+      "icon": ":material/query_stats:"
+    },
+    {
+      "url_path": "comparison",
+      "title": "Model comparison",
+      "icon": ":material/leaderboard:"
+    },
+    {
+      "url_path": "evaluation",
+      "title": "Model evaluation",
+      "icon": ":material/fact_check:"
+    },
+    {
+      "url_path": "prediction",
+      "title": "Sentiment prediction",
+      "icon": ":material/chat:"
+    }
+  ],
+  "query_params": {},
+  "tree": {
+    "type": "root",
+    "children": [
+      {
+        "type": "main",
+        "children": [
+          {
+            "type": "caption",
+            "props": {
+              "body": "GTA VI SENTIMENT LAB  /  OVERVIEW"
+            }
+          },
+          {
+            "type": "title",
+            "props": {
+              "body": "Apa cerita di balik ulasan GTA VI?"
+            }
+          },
+          {
+            "type": "markdown",
+            "props": {
+              "body": "Eksplorasi ulasan pengguna dan bandingkan tiga model untuk memprediksi **Negative**, **Neutral**, atau **Positive** dari teks."
+            }
+          },
+          {
+            "type": "container",
+            "children": [
+              {
+                "type": "metric",
+                "props": {
+                  "label": "Ulasan dianalisis",
+                  "value": "49,981",
+                  "label_visibility": "visible"
+                }
+              },
+              {
+                "type": "metric",
+                "props": {
+                  "label": "Data training",
+                  "value": "39,985",
+                  "label_visibility": "visible"
+                }
+              },
+              {
+                "type": "metric",
+                "props": {
+                  "label": "Data testing",
+                  "value": "9,996",
+                  "label_visibility": "visible"
+                }
+              },
+              {
+                "type": "metric",
+                "props": {
+                  "label": "Kelas sentimen",
+                  "value": 3,
+                  "label_visibility": "visible"
+                }
+              }
+            ]
+          },
+          {
+            "type": "container",
+            "children": [
+              {
+                "type": "subheader",
+                "props": {
+                  "body": "Distribusi sentimen"
+                }
+              },
+              {
+                "type": "caption",
+                "props": {
+                  "body": "Seluruh dataset processed; label dibentuk dari rating pengguna."
+                }
+              },
+              {
+                "type": "altair_chart",
+                "props": {
+                  "alt": "Jumlah ulasan Negative, Neutral, dan Positive pada dataset analisis"
+                },
+                "data": {
+                  "columns": [
+                    {
+                      "name": "Kategori",
+                      "type": "large_string"
+                    },
+                    {
+                      "name": "Ulasan",
+                      "type": "int64"
+                    },
+                    {
+                      "name": "Proporsi",
+                      "type": "double"
+                    }
+                  ],
+                  "row_count": 3,
+                  "column_count": 3,
+                  "complete": true,
+                  "preview": {
+                    "rows": [
+                      [
+                        "Negative",
+                        25302,
+                        0.506232368299954
+                      ],
+                      [
+                        "Positive",
+                        20925,
+                        0.41865909045437266
+                      ],
+                      [
+                        "Neutral",
+                        3754,
+                        0.07510854124567336
+                      ]
+                    ]
+                  },
+                  "url": "../../media/9e7784c1949ca089ada392a805aa263a",
+                  "spec": {
+                    "data": {
+                      "name": "76451395c6e688fdc4747337bf3ddd35"
+                    },
+                    "mark": {
+                      "type": "bar",
+                      "cornerRadiusTopLeft": 5,
+                      "cornerRadiusTopRight": 5
+                    },
+                    "encoding": {
+                      "color": {
+                        "field": "Kategori",
+                        "legend": null,
+                        "sort": [
+                          "Negative",
+                          "Neutral",
+                          "Positive"
+                        ],
+                        "type": "nominal"
+                      },
+                      "tooltip": [
+                        {
+                          "field": "Kategori",
+                          "type": "nominal"
+                        },
+                        {
+                          "field": "Ulasan",
+                          "format": ",",
+                          "type": "quantitative"
+                        },
+                        {
+                          "field": "Proporsi",
+                          "format": ".1%",
+                          "type": "quantitative"
+                        }
+                      ],
+                      "x": {
+                        "axis": {
+                          "labelAngle": 0
+                        },
+                        "field": "Kategori",
+                        "sort": [
+                          "Negative",
+                          "Neutral",
+                          "Positive"
+                        ],
+                        "title": null,
+                        "type": "nominal"
+                      },
+                      "y": {
+                        "field": "Ulasan",
+                        "scale": {
+                          "zero": true
+                        },
+                        "title": "Jumlah ulasan",
+                        "type": "quantitative"
+                      }
+                    },
+                    "height": 270,
+                    "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json",
+                    "autosize": {
+                      "type": "fit",
+                      "contains": "padding"
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "container",
+            "children": [
+              {
+                "type": "container",
+                "children": [
+                  {
+                    "type": "subheader",
+                    "props": {
+                      "body": "Eksperimen yang dapat dibandingkan"
+                    }
+                  },
+                  {
+                    "type": "markdown",
+                    "props": {
+                      "body": "Multinomial Naive Bayes, Logistic Regression, dan Linear SVM memakai fitur TF-IDF serta pembagian data yang sama. Teks bersih identik dikelompokkan agar tidak melintasi training dan testing."
+                    }
+                  },
+                  {
+                    "type": "caption",
+                    "props": {
+                      "body": "Data ulasan: 2026-11-19 sampai 2026-11-24"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "container",
+                "children": [
+                  {
+                    "type": "subheader",
+                    "props": {
+                      "body": "Terbaik pada Macro F1"
+                    }
+                  },
+                  {
+                    "type": "markdown",
+                    "props": {
+                      "body": "### Logistic Regression"
+                    }
+                  },
+                  {
+                    "type": "metric",
+                    "props": {
+                      "label": "Macro F1 pada test",
+                      "value": "69.85%",
+                      "label_visibility": "visible"
+                    }
+                  },
+                  {
+                    "type": "caption",
+                    "props": {
+                      "body": "Peringkat dari satu test set; bukan bukti keunggulan pada semua data."
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "subheader",
+            "props": {
+              "body": "Cara membaca label"
+            }
+          },
+          {
+            "type": "markdown",
+            "props": {
+              "body": "**Negative: rating 0–4** · **Neutral: rating 5–7** · **Positive: rating 8–10**. Model mempelajari hubungan teks dengan kategori rating tersebut, bukan penilaian sentimen manusia."
+            }
+          },
+          {
+            "type": "caption",
+            "props": {
+              "body": "Sumber yang diberikan pemilik proyek: [Kaggle — GTA VI user reviews](https://www.kaggle.com/datasets/ektarr/gta-vi-user-reviews/data). Versi unduhan, lisensi, dan arti review_id belum terverifikasi independen. Dataset memakai kebijakan deduplikasi dan cleaning legacy yang didokumentasikan dalam README."
+            }
+          }
+        ]
+      },
+      {
+        "type": "sidebar",
+        "children": [
+          {
+            "type": "title",
+            "props": {
+              "body": "GTA VI"
+            }
+          },
+          {
+            "type": "caption",
+            "props": {
+              "body": "SENTIMENT LAB"
+            }
+          },
+          {
+            "type": "markdown",
+            "props": {
+              "body": "Dari ulasan pengguna ke evaluasi tiga model klasifikasi."
+            }
+          },
+          {
+            "type": "caption",
+            "props": {
+              "body": "Label berasal dari rating 0–10, bukan anotasi sentimen manusia."
+            }
+          },
+          {
+            "type": "caption",
+            "props": {
+              "body": "Eksperimen grouped_v1 · TF-IDF · 3 kelas"
+            }
+          }
+        ]
+      },
+      {
+        "type": "event",
+        "children": []
+      },
+      {
+        "type": "bottom",
+        "children": []
+      }
+    ]
+  },
+  "actions": []
+}

@@ -1,0 +1,38 @@
+{
+  "description": "Snapshot artifact sebelum perbaikan audit; file asli dipertahankan.",
+  "created_utc": "2026-11-25T15:45:37.644232+00:00",
+  "files": {
+    "reviews.csv": {
+      "bytes": 27443936,
+      "sha256": "1ece2effb86a11e1b2714b5aa86b78de32c9de708689f04238f6e7aa7dd32d8d"
+    },
+    "data/processed/processed_reviews.csv": {
+      "bytes": 47709640,
+      "sha256": "1ade51d4122526283a555a110becbc2895694464cbfcb64a64b7ddd6e04c434b"
+    },
+    "data/processed/X_test_tfidf.npz": {
+      "bytes": 6905978,
+      "sha256": "86ef85f57f6244bc05a9c4a7ca8d4454cfddc484baf65fade6fe67f5045b2349"
+    },
+    "data/processed/X_train_tfidf.npz": {
+      "bytes": 28718477,
+      "sha256": "43e0ad086d75fa52fa87903d76de763a349331d9c18b4fe5ca475472a9e5af89"
+    },
+    "data/processed/y_test.csv": {
+      "bytes": 99230,
+      "sha256": "9e0d7bf32be277a375a3a54352335f8c61a3fe828589df4979c7e82aa0b44c55"
+    },
+    "data/processed/y_train.csv": {
+      "bytes": 396848,
+      "sha256": "bc988f9b7895083778d3dcf414419df188518af5d5a5b22c829d42e5d9f3f394"
+    },
+    "data/raw/gta_vi_reviews.csv": {
+      "bytes": 27495382,
+      "sha256": "71fa458d4cba42d685fb1dfb178a5fbcce5c1b63f904b1dc0a03d2f707b316a5"
+    },
+    "models/tfidf_vectorizer.pkl": {
+      "bytes": 775631,
+      "sha256": "8168549bba247f9a239a1a93628cc5c1d54f79249a862f39de8e5239b8dc0937"
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "created_utc": "2026-11-25T16:16:14.705589+00:00",
+  "instructions": "PRD.md",
+  "configuration_basis": "Fixed baseline chosen before test predictions; PRD contains no numerical hyperparameters.",
+  "selection_metric": "f1_macro",
+  "test_usage": "Final evaluation only; no tuning or early stopping.",
+  "imbalance": "LR/SVM balanced weights computed from training labels; NB uses empirical training class priors.",
+  "models": {
+    "naive_bayes": {
+      "alpha": 1.0,
+      "class_prior": null,
+      "fit_prior": true,
+      "force_alpha": true
+    },
+    "logistic_regression": {
+      "C": 1.0,
+      "class_weight": "balanced",
+      "dual": false,
+      "fit_intercept": true,
+      "intercept_scaling": 1,
+      "l1_ratio": 0.0,
+      "max_iter": 2000,
+      "n_jobs": null,
+      "penalty": "deprecated",
+      "random_state": 42,
+      "solver": "lbfgs",
+      "tol": 0.0001,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "linear_svm": {
+      "C": 1.0,
+      "class_weight": "balanced",
+      "dual": "auto",
+      "fit_intercept": true,
+      "intercept_scaling": 1,
+      "loss": "squared_hinge",
+      "max_iter": 10000,
+      "multi_class": "ovr",
+      "penalty": "l2",
+      "random_state": 42,
+      "tol": 0.0001,
+      "verbose": 0
+    }
+  },
+  "classes": [
+    "Negative",
+    "Neutral",
+    "Positive"
+  ],
+  "training_shape": [
+    39985,
+    20000
+  ],
+  "training_class_counts": {
+    "Negative": 20242,
+    "Positive": 16740,
+    "Neutral": 3003
+  },
+  "feature_manifest_sha256": "691e564b52a9d2efda7ea13bba50edb7965b3fc3a5044da8b07333bb38e028cb",
+  "phase3_input_hashes": {
+    "models/grouped_v1/tfidf_vectorizer.pkl": "9184826bcdaab80d07119bd1c11b872fdf58dcb85a3a7623583564c5ab18f250",
+    "data/processed/grouped_v1/X_train_tfidf.npz": "40a453085d0af4cb7a75d55f1e6d58fd13e31f48dd953959fa7e876021d8dbb7",
+    "data/processed/grouped_v1/X_test_tfidf.npz": "6ba254992c1f0d72182e34a5b8b48181b6eac7cee0470343c94892c3242f1c41",
+    "data/processed/grouped_v1/y_train.csv": "f11c7f55d3352e6fd807b08f7de6cfb4a631362e41c349e1fe7ec0cefcded9b0",
+    "data/processed/grouped_v1/y_test.csv": "396e3d674224f7a703298ad7e585d800cf2596bacf76000036997903f0016a89",
+    "data/processed/grouped_v1/split_membership.csv": "36c1b82104fc6b1e87bd4c972007cf759db6b93e6e2f0b1eba74d130d54c51d4"
+  },
+  "environment": {
+    "python": "3.13.0",
+    "packages": {
+      "numpy": "2.5.5",
+      "pandas": "3.1.1",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.1",
+      "joblib": "1.6.0"
+    }
+  }
+}
