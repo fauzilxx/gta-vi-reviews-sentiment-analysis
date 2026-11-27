@@ -1,0 +1,198 @@
+{
+  "sample_size": 60,
+  "exact_agreement": 0.75,
+  "exact_matches": 45,
+  "cohen_kappa": 0.625,
+  "labels": [
+    "Negative",
+    "Neutral",
+    "Positive"
+  ],
+  "confusion_matrix_proxy_rows_human_cols": [
+    [
+      18,
+      2,
+      0
+    ],
+    [
+      12,
+      7,
+      1
+    ],
+    [
+      0,
+      0,
+      20
+    ]
+  ],
+  "per_rating_bucket": {
+    "Negative": {
+      "sample_count": 20,
+      "exact_matches": 18,
+      "alignment_rate": 0.9,
+      "human_distribution": {
+        "Negative": 18,
+        "Neutral": 2
+      }
+    },
+    "Neutral": {
+      "sample_count": 20,
+      "exact_matches": 7,
+      "alignment_rate": 0.35,
+      "human_distribution": {
+        "Negative": 12,
+        "Neutral": 7,
+        "Positive": 1
+      }
+    },
+    "Positive": {
+      "sample_count": 20,
+      "exact_matches": 20,
+      "alignment_rate": 1.0,
+      "human_distribution": {
+        "Positive": 20
+      }
+    }
+  },
+  "classification_report_proxy_vs_human": {
+    "Negative": {
+      "precision": 0.9,
+      "recall": 0.6,
+      "f1-score": 0.72,
+      "support": 30.0
+    },
+    "Neutral": {
+      "precision": 0.35,
+      "recall": 0.7777777777777778,
+      "f1-score": 0.4827586206896552,
+      "support": 9.0
+    },
+    "Positive": {
+      "precision": 1.0,
+      "recall": 0.9523809523809523,
+      "f1-score": 0.975609756097561,
+      "support": 21.0
+    },
+    "accuracy": 0.75,
+    "macro avg": {
+      "precision": 0.75,
+      "recall": 0.7767195767195766,
+      "f1-score": 0.7261227922624055,
+      "support": 60.0
+    },
+    "weighted avg": {
+      "precision": 0.8524999999999999,
+      "recall": 0.75,
+      "f1-score": 0.7738772077375946,
+      "support": 60.0
+    }
+  },
+  "disagreement_count": 15,
+  "disagreements": [
+    {
+      "review_id": "mc-profile-565cee18b0ba62c7d2e794eea09db170e184108068e94b4eb1f77dbfc2078012",
+      "score": 0,
+      "sentiment": "Negative",
+      "human_sentiment": "Neutral",
+      "review_notes": "Spanish: off-topic meta-vote against Ocarina; no opinion on GTA VI"
+    },
+    {
+      "review_id": "mc-profile-d952734e0092adab8cad5981a020f62b024786949d1435f931b23bcf07e633e1",
+      "score": 4,
+      "sentiment": "Negative",
+      "human_sentiment": "Neutral",
+      "review_notes": "Mixed: impressed by realism/effort and fine with 30fps, but disappointed vs GTA V"
+    },
+    {
+      "review_id": "mc-profile-535a77e0c6ce69227bbfa1ace77b9e038a146df97c8f8ce4fdbc64668a4cf7ce",
+      "score": 5,
+      "sentiment": "Neutral",
+      "human_sentiment": "Positive",
+      "review_notes": "Portuguese: defends game against <90 reviews and praises protagonist theme"
+    },
+    {
+      "review_id": "mc-profile-0b91749cf03d6ee2cfc9999040fa9ae27e2d90cd0cb92ff8a19a095ddcb7d00a",
+      "score": 7,
+      "sentiment": "Neutral",
+      "human_sentiment": "Negative",
+      "review_notes": "Complains it is no longer a fun game, just a life emulator"
+    },
+    {
+      "review_id": "mc-profile-95ab8b2d8d02630bc6cd5d19b63cfaf577d123ab4b4710a6da1b11789ba22826",
+      "score": 5,
+      "sentiment": "Neutral",
+      "human_sentiment": "Negative",
+      "review_notes": "Overwhelmingly negative: not worth the wait, buggy mess, fail/cancel"
+    },
+    {
+      "review_id": "mc-profile-25f9350770333033a8ebf2d0ece3f8571441668ec3ca89844a167ea1a0eaed33",
+      "score": 5,
+      "sentiment": "Neutral",
+      "human_sentiment": "Negative",
+      "review_notes": "Purely negative rant despite 5/10 score"
+    },
+    {
+      "review_id": "mc-profile-6a39d487e2b5a9a585df6320bf8657b35c46b795e7c476f252cd5c5ce165f001",
+      "score": 7,
+      "sentiment": "Neutral",
+      "human_sentiment": "Negative",
+      "review_notes": "Predominantly negative (hideous performance, meh story/graphics, sluggish) despite humor praise"
+    },
+    {
+      "review_id": "mc-profile-b1addfacfe0beb286e7524776bab57ff76d29b6d761b2aa27e965734341b77a8",
+      "score": 5,
+      "sentiment": "Neutral",
+      "human_sentiment": "Negative",
+      "review_notes": "French: calls it boring (chiant) and technically lacking; only map is interesting"
+    },
+    {
+      "review_id": "mc-profile-610756b9ec0f8c738dfda606f252bddd5389bf8ece5c47f9688d0cc1a73f490f",
+      "score": 6,
+      "sentiment": "Neutral",
+      "human_sentiment": "Negative",
+      "review_notes": "Praises visuals briefly then tears down monetization, gameplay, 30fps, and lock-in"
+    },
+    {
+      "review_id": "mc-profile-204acdd26db97fbbe92534a7a73af5d4788b33f281585b9e0f76c79d2d9aedbb",
+      "score": 5,
+      "sentiment": "Neutral",
+      "human_sentiment": "Negative",
+      "review_notes": "Negative comparison to GTA 5"
+    },
+    {
+      "review_id": "mc-profile-f226eff13b59827c65ee2e594b3087a2f6045b76bd13cede1081409b6abd28f8",
+      "score": 5,
+      "sentiment": "Neutral",
+      "human_sentiment": "Negative",
+      "review_notes": "Explicitly concludes all issues make it a bad game"
+    },
+    {
+      "review_id": "mc-profile-b5762df1131b0895147cdc4ce657b2e0cf11286297b365c5c2042141a6f1a466",
+      "score": 5,
+      "sentiment": "Neutral",
+      "human_sentiment": "Negative",
+      "review_notes": "Dissatisfied overall despite praising graphics"
+    },
+    {
+      "review_id": "mc-profile-b123fd10516a638a7a6c20e149b347b9646b6a31f7987d38c490b63bc4689006",
+      "score": 6,
+      "sentiment": "Neutral",
+      "human_sentiment": "Negative",
+      "review_notes": "Disappointed in protagonist and game overall"
+    },
+    {
+      "review_id": "mc-profile-ff63ecf5f90080b4218d11ec4dc2559d86b9f344a28d43e55c9fe868729d78db",
+      "score": 5,
+      "sentiment": "Neutral",
+      "human_sentiment": "Negative",
+      "review_notes": "Calls it a massive disappointment behind pretty graphics"
+    },
+    {
+      "review_id": "mc-profile-9031fbef38d5363ded79f26e80a884c4fc172eb3a48b99f7f4e14773a48139ec",
+      "score": 6,
+      "sentiment": "Neutral",
+      "human_sentiment": "Negative",
+      "review_notes": "Awful, bad as hell, poor performance/glitches"
+    }
+  ]
+}

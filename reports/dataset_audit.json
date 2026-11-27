@@ -3,9 +3,10 @@
     "url": "https://www.kaggle.com/datasets/ektarr/gta-vi-user-reviews/data",
     "provided_by": "user",
     "version": null,
-    "license": null,
-    "verification": "URL supplied by user; Kaggle page had no readable documentation in browsing tool.",
-    "review_id_semantics": "unverified; repeated IDs occur across platforms"
+    "license": "CC BY-SA 4.0 (Creative Commons Attribution-ShareAlike 4.0 International)",
+    "verification": "License CC BY-SA 4.0 confirmed via Kaggle public index; exact local CSV download version could not be verified programmatically (unauthenticated Kaggle endpoint returned HTTP 404).",
+    "review_id_semantics": "(platform, review_id) is the unique primary key (0 duplicates across 51,385 raw rows); review_id is a Metacritic profile hash (mc-profile-...) that repeats when a user reviews on both PS5 and Xbox Series X.",
+    "platform_review_id_duplicate_excess": 0
   },
   "raw": {
     "rows": 51385,
@@ -53,7 +54,8 @@
       "xbox-series-x": 5068
     },
     "review_id_duplicate_excess": 1156,
-    "review_text_duplicate_excess": 651
+    "review_text_duplicate_excess": 651,
+    "platform_review_id_duplicate_excess": 0
   },
   "processed": {
     "rows": 49981,
@@ -113,7 +115,8 @@
     },
     "review_id_duplicate_excess": 0,
     "review_text_duplicate_excess": 0,
-    "clean_text_duplicate_excess": 34
+    "clean_text_duplicate_excess": 34,
+    "platform_review_id_duplicate_excess": 0
   },
   "source_column_difference_counts": {
     "platform": 0,
